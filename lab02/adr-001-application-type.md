@@ -2,7 +2,7 @@
 Version 1.0 · 2026-10-23 · Status: Proposed (ACCEPTED!) · Deciders: KoPrei
 
 ## Context
-Club events at ITC are announced in scattered chat groups. About 3,000 students on Android or iPhone need to browse and register, organisers need to check people in at doors with weak Wi-Fi, and 2-3 administrators need desktop reports and club approvals. We are a team of 4-5 with one semester.
+Club events at ITC are announced in scattered chat groups. About 3,000 students on Android or iPhone need to browse and register, organisers need to check people in at doors with weak Wi-Fi, and 2-3 administrators need desktop reports and club approvals. We are a team of 4-5 with one semester.git g
 
 ## User groups
 | Group          | Device | Where | Connectivity | How often | Must never fail |
