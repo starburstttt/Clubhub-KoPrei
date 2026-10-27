@@ -1,0 +1,36 @@
+flowchart TB
+  subgraph P[Presentation]
+    PWA["PWA for students and organisers<br/>(modelled only)"]
+    WEB["Web app on desktop for administrators<br/>(modelled only)"]
+    CLI["C++ CLI<br/>src/cli/"]
+  end
+  subgraph L[Logic]
+    API["HTTP API REST + JSON<br/>(modelled only)"]
+    RS["RegistrationService<br/>include/clubhub/, src/"]
+    ES["EventService<br/>include/clubhub/, src/"]
+  end
+  subgraph D[Data]
+    CSV[("CSV files<br/>data/")]
+    DB[("Database<br/>(later, modelled only)")]
+  end
+  MAIL[[E-mail service]]
+  DIR[[ITC student directory]]
+
+  PWA --> API
+  WEB --> API
+  API --> RS
+  API --> ES
+  CLI --> RS
+  CLI --> ES
+  RS --> CSV
+  ES --> CSV
+  RS -.-> DB
+  RS --> MAIL
+  RS --> DIR
+
+  classDef impl fill:#c8e6c9,stroke:#2e7d32,stroke-width:2px,color:#000
+  classDef modelled fill:#eeeeee,stroke:#888,stroke-dasharray:5 5,color:#000
+  classDef ext fill:#fff3cd,stroke:#b8860b,color:#000
+  class CLI,RS,ES,CSV impl
+  class PWA,WEB,API,DB modelled
+  class MAIL,DIR ext
