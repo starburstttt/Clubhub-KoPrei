@@ -26,29 +26,29 @@ Version 1.0 · 2026-10-27 · Reviewed by Cheng Varyroitanak (10-27-2026) -- [Pls
 | **Response** | The check-in is stored on the phone and the green tick is shown without waiting for the network. The queue syncs when the network is back. |
 | **Response measure** | Green tick within **1 s** for >= **95%** of scans, even with 0 network. Sustained rate >= **20 scans/min** per phone (200 / 10 min). All queued check-ins uploaded within **30 s** after the network returns. |
 
-## QAS-03 · Usability · written by Hengly
+## QAS-03 · Usability · written by Suonghan Sethaleaph
 
 
 | Part | Content |
 |------|---------|
-| **Source** | A newly onboarded student club executive |
-| **Stimulus** | Attempts to create a new event, configure registration fields, and publish the event listing |
-| **Environment** | First-time use during normal operations, desktop browser, without prior training or consulting documentation|
-| **Artifact** | Club administration interface and event creation workflow |
-| **Response** | The interface guides the user through required fields with inline validation, clear error feedback, and pre-filled defaults |
-| **Response measure** | Task completion rate >= 90% on the first attempt without external assistance; total time to configure and publish an event <= 5 minutes; user error rate <= 1 critical error per session |
+| **Source** |A first-time student user (has never used Club Hub) |
+| **Stimulus** |Wants to find a club event and register for it, without a tutorial or help from anyone |
+| **Environment** |Normal operation, on a mobile phone (screen width 360-412 px), mobile data, during the first week of the semester |
+| **Artifact** |Event browsing and registration pages of the web front end |
+| **Response** |The student finds the event from the home page, registers in a few clear steps, and sees a confirmation message. If they make a mistake (e.g., an empty required field), the system shows a clear error message next to the field and keeps the data already entered. |
+| **Response measure** |In a usability test with at least 10 first-time students: >= **90%** complete registration without help, in <= **60 s** on average and <= **4 steps** from the home page to confirmation. Error rate is <= **1 error per registration**, and the average satisfaction score is >= **4/5** (or SUS >= 70). |
 
-## QAS-04 · Security · written by __
+## QAS-04 · Security · written by Suonghan Sethaleaph
 
 
 | Part | Content |
 |------|---------|
-| **Source** | |
-| **Stimulus** | |
-| **Environment** | |
-| **Artifact** | |
-| **Response** | |
-| **Response measure** | |
+| **Source** |An unauthorized external user (an attacker, or a student trying to act as another student) |
+| **Stimulus** |Attempts to access or change another student's registration data, by guessing passwords (brute force) or by changing the ID in a request URL |
+| **Environment** |Normal operation, public internet, during the Friday 18:00-21:00 peak window, with up to 3,000 legitimate students online |
+| **Artifact** |Authentication module, registration service, and the database holding student data |
+| **Response** |The system checks the identity and permissions of every request, and denies access to data that does not belong to the requester. After repeated failed logins, it locks the account temporarily and notifies the user. All attempts are logged, and the administrator is alerted. Data is encrypted in transit (HTTPS) and passwords are stored hashed. |
+| **Response measure** |In a security test: **100%** of unauthorized access attempts are blocked, with **0** records exposed. The account is locked after **5** failed logins within 10 minutes. Suspicious attempts appear in the log within **1 min** and the admin is alerted within **5 min**. No critical or high-severity vulnerabilities remain in the OWASP Top 10 scan before release. |
 
 ## QAS-05 · Modifiability · written by __
 
