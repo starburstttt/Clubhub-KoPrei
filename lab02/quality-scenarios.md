@@ -1,72 +1,89 @@
 # Lab-02 · Quality attribute scenarios for ITC Club Hub
-Version 1.0 · 2026-23-10 · Reviewed by (Scrum Master): Hengly
 
-## QAS-01 · Availability · written by Hengly
-| Part | Content |
-|---|---|
-| Source | Cloud hosting infrastructure / Hardware failure |
-| Stimulus | Primary database or API application container crashes |
-| Environment | Friday 18:00, registration opens, 500 active concurrent student sessions on a 4G mobile network |
-| Artifact | ITC Club Hub core backend application & main database service |
-| Response | System automatically detects failure via health check, routes traffic to a failover replica, and restores full service |
-| Response measure | Target availability: 99.9% monthly uptime. Downtime limit: (1 - 0.999) x 30 x 24 x 60 = 43.2 minutes/month. Maximum Recovery Time Objective (RTO) < 30 seconds per incident. |
+Version 1.0 · 2026-10-27 · Reviewed by Cheng Varyroitanak (10-27-2026) -- [Pls update this to Version 2.0 IF you update this file]
 
-## QAS-02 · Performance of check-in at the door · written by Hengly
+---
+
+## QAS-01 · Availability · written by CHENG Varyroitanak
+
 | Part | Content |
-|---|---|
-| Source | Event Organiser / Door Staff |
-| Stimulus | Organiser scans a student's digital check-in QR code at the entrance |
-| Environment | Event doorway during peak arrival window: 200 student arrivals in 10 minutes (20 scans/min) on campus Wi-Fi |
-| Artifact | Check-in scanner module and API endpoint |
-| Response | System validates ticket signature, updates attendance status in DB, and displays confirmation badge to organiser |
-| Response measure | Latency p95 <= 1.5 seconds per check-in scan. 0% duplicate entry processing errors allowed across all 200 attendees. |
+|------|---------|
+| **Source** | A student |
+| **Stimulus** | Opens Club Hub and registers for an event the moment registrations open |
+| **Environment** | Friday 18:00-21:00, normal operation, peak traffic (up to 3,000 students), mobile data |
+| **Artifact** | Registration service and web front end |
+| **Response** | The registration is processed and the confirmation is shown. If a server process crashes, it restarts automatically and requests keep being served. |
+| **Response measure** | Availability >= **99.5%** per month, which allows 0.5% x 30 days x 24 h x 60 min = **216 min** of downtime per month. In the Friday 18:00-21:00 window it is >= **99.9%**, which allows 180 min x 0.1% = **about 11 s** of downtime per window. |
+
+## QAS-02 · Performance of check-in at the door · written by CHENG Varyroitanak
+
+| Part | Content |
+|------|---------|
+| **Source** | An organiser at the door |
+| **Stimulus** | Scans the QR code of arriving students: 200 arrivals in 10 minutes at one entrance (600 s / 200 = one scan every **3 s** on average) |
+| **Environment** | Amphi A, Wi-Fi weak or down, one phone running the PWA, peak arrival period |
+| **Artifact** | PWA check-in screen and the local check-in queue |
+| **Response** | The check-in is stored on the phone and the green tick is shown without waiting for the network. The queue syncs when the network is back. |
+| **Response measure** | Green tick within **1 s** for >= **95%** of scans, even with 0 network. Sustained rate >= **20 scans/min** per phone (200 / 10 min). All queued check-ins uploaded within **30 s** after the network returns. |
 
 ## QAS-03 · Usability · written by Hengly
-| Part | Content |
-|---|---|
-| Source | First-time student user |
-| Stimulus | User attempts to find a specific club and submit a membership registration form |
-| Environment | Mobile web browser (Chrome on Android / Safari on iOS) on 3G network without prior training or user manual |
-| Artifact | Club discovery directory & registration workflow interface |
-| Response | System provides clear navigation, pre-filled student ID fields, and instant input validation feedback |
-| Response measure | Completed in <= 3 taps from homepage to submission form. 90% of first-time users complete registration in <= 90 seconds without triggering validation errors. |
 
-## QAS-04 · Security · written by Hengly
-| Part | Content |
-|---|---|
-| Source | Unauthenticated malicious student / Unauthorized external actor |
-| Stimulus | Attacker attempts SQL injection / IDOR endpoint manipulation to access private student phone numbers and attendance records |
-| Environment | Production environment during normal web operation over HTTPS connection |
-| Artifact | User authentication service, API gateway, and Postgres database holding PII (student IDs, full names, phone numbers) |
-| Response | System blocks unauthorized request via parameter sanitization and JWT validation, logs security alert, and hides PII |
-| Response measure | 0 records leaked or exposed. Unauthorized API request returns HTTP 403/401 within <= 100 ms. Security audit log entry created in <= 1 second. |
 
-## QAS-05 · Modifiability · written by Hengly
 | Part | Content |
-|---|---|
-| Source | Software Developer / Maintainer |
-| Stimulus | Developer receives a request to add a new "Telegram notification" feature for event updates |
-| Environment | Development environment during sprint cycle, codebase using modular architecture |
-| Artifact | Event notification service and webhooks integration layer |
-| Response | Developer adds Telegram API integration without altering core database schema or event core modules |
-| Response measure | Changes isolated to <= 3 files altered. Total development and verification effort <= 2 days of work (16 person-hours). Regression test suite maintains 100% pass rate. |
+|------|---------|
+| **Source** | A newly onboarded student club executive |
+| **Stimulus** | Attempts to create a new event, configure registration fields, and publish the event listing |
+| **Environment** | First-time use during normal operations, desktop browser, without prior training or consulting documentation|
+| **Artifact** | Club administration interface and event creation workflow |
+| **Response** | The interface guides the user through required fields with inline validation, clear error feedback, and pre-filled defaults |
+| **Response measure** | Task completion rate >= 90% on the first attempt without external assistance; total time to configure and publish an event <= 5 minutes; user error rate <= 1 critical error per session |
 
-## QAS-06 · Portability · written by Hengly
+## QAS-04 · Security · written by __
+
+
 | Part | Content |
-|---|---|
-| Source | System Administrator / QA Engineer |
-| Stimulus | Deploying and verifying web application compatibility across target client browsers and mobile OS platforms |
-| Environment | Target browser matrices: Chrome v115+, Safari v16+, Firefox v115+ on iOS 16+, Android 12+, and macOS/Windows 11 |
-| Artifact | Frontend single-page application assets and responsive UI layout |
-| Response | Web app renders responsively without layout breakages, console JS errors, or feature loss across tested devices |
-| Response measure | 100% pass rate across standard automated browser matrix tests. Zero broken layouts or unhandled JS exceptions across all 6 targeted browser/OS combinations. |
+|------|---------|
+| **Source** | |
+| **Stimulus** | |
+| **Environment** | |
+| **Artifact** | |
+| **Response** | |
+| **Response measure** | |
+
+## QAS-05 · Modifiability · written by __
+
+
+| Part | Content |
+|------|---------|
+| **Source** | A system developer / maintainer |
+| **Stimulus** | Requests the integration of a new third-party payment/ticketing gateway for paid campus events |
+| **Environment** | Development and staging environments during a scheduled maintenance/feature release window |
+| **Artifact** | Registration and payment backend module architecture |
+| **Response** | The developer adds the new payment provider implementation using existing abstraction interfaces without modifying core event registration logic or breaking existing APIs. |
+| **Response measure** | Implementation and unit test coverage completed within <= 2 person-days; 0 changes required in core registration components; all automated regression tests pass on the first CI/CD run. |
+
+## QAS-06 · Portability · written by __
+
+
+| Part | Content |
+|------|---------|
+| **Source** | |
+| **Stimulus** | |
+| **Environment** | |
+| **Artifact** | |
+| **Response** | |
+| **Response measure** | |
+
+---
 
 ## Priorities
+
 | Scenario | Business importance | Technical risk | Protects | First? |
-|----------|---------------------|----------------|----------|--------|
-| QAS-01 | High | High | General users & event continuity | Yes |
-| QAS-02 | High | High | Event organizers & entry flow | Yes |
-| QAS-03 | Medium | Low | First-time student users | No |
-| QAS-04 | High | Medium | Student personal data (PII) | No |
-| QAS-05 | Low | Medium | Development team & maintainability | No |
-| QAS-06 | Medium | Low | Cross-platform student user base | No |
+|----------|:---:|:---:|----------|:---:|
+| QAS-01 Availability | H | M | Students (Friday peak) | |
+| QAS-02 Check-in performance | H | H | Organisers (door, no Wi-Fi) | |
+| QAS-03 Usability | | | | |
+| QAS-04 Security | | | | |
+| QAS-05 Modifiability | | | | |
+| QAS-06 Portability | | | | |
+>>>>>>> ff7c612895ea31d6fc204e85c20f483564ef87b1
