@@ -62,17 +62,17 @@ Version 1.0 · 2026-10-27 · Reviewed by Cheng Varyroitanak (10-27-2026) -- [Pls
 | **Response** | |
 | **Response measure** | |
 
-## QAS-06 · Portability · written by __
+## QAS-06 · Portability · written by Pho Phatsophal 
 
 
 | Part | Content |
 |------|---------|
-| **Source** | |
-| **Stimulus** | |
-| **Environment** | |
-| **Artifact** | |
-| **Response** | |
-| **Response measure** | |
+| **Source** |Students and club organizers using different devices and operating systems |
+| **Stimulus** |A student registers for an event on a phone, an organizer checks in attendees on a phone, or an administrator accesses reports on a desktop computer. |
+| **Environment** |Friday 18:00, registration opens; 200 arrivals within 10 minutes; approximately 3,000 students use Android or iPhone devices, organizers use phones at entrances with weak or unavailable Wi-Fi, and 2–3 administrators use desktop PCs on a stable office network. |
+| **Artifact** |Club Hub PWA, responsive user interface, service worker, local offline check-in queue, and desktop administration interface. |
+| **Response** |The PWA works on supported Android and iPhone browsers without requiring installation from an app store. The desktop interface supports administrative reports and club approvals. Organizers can record check-ins while offline, store them locally, and synchronise them when connectivity returns. |
+| **Response measure** |100% of compatibility test cases pass on the agreed Android and iPhone browser configurations and desktop browser configurations. Verify event browsing, registration, and confirmation on mobile; administrative reports and approvals on desktop; and offline check-in with successful synchronization after reconnection. Complete 20 consecutive offline check-ins without network access, then reconnect and verify that all 20 records synchronize correctly, with 0 lost records and 0 duplicate attendance records. |
 
 ---
 
