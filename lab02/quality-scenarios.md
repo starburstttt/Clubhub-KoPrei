@@ -50,7 +50,7 @@ Version 1.0 · 2026-10-27 · Reviewed by Cheng Varyroitanak (10-27-2026) -- [Pls
 | **Response** |The system checks the identity and permissions of every request, and denies access to data that does not belong to the requester. After repeated failed logins, it locks the account temporarily and notifies the user. All attempts are logged, and the administrator is alerted. Data is encrypted in transit (HTTPS) and passwords are stored hashed. |
 | **Response measure** |In a security test: **100%** of unauthorized access attempts are blocked, with **0** records exposed. The account is locked after **5** failed logins within 10 minutes. Suspicious attempts appear in the log within **1 min** and the admin is alerted within **5 min**. No critical or high-severity vulnerabilities remain in the OWASP Top 10 scan before release. |
 
-## QAS-05 · Modifiability · written by __
+## QAS-05 · Modifiability · written by Hengly
 
 
 | Part | Content |
