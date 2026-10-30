@@ -1,5 +1,6 @@
 # .gitignore for a C++ / CMake project
 # build output
+.vscode/
 build/
 out/
 cmake-build-*/
