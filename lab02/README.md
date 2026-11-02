@@ -85,7 +85,7 @@ itc-club-hub/
 
 ## Contribution Notes
 
-* **YEN Chhavorn** was unavailable during this lab period and has no commits in Lab 02.
+* **YEN Chhavorn** was sick and unwell during this lab period and has no commits in Lab 02.
 
 ---
 
