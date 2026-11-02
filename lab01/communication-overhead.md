@@ -1,4 +1,4 @@
-# Communication overhead · <team name> (v1.0, 2026-__-__)
+# Communication overhead · Team KoPrei (v1.0, 2026-10-27)
 
 ## Paths
 | Model | People n | Paths n(n-1)/2 | Minutes/week | Hours/week |

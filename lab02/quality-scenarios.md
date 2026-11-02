@@ -1,6 +1,6 @@
 # Lab-02 · Quality attribute scenarios for ITC Club Hub
 
-Version 1.0 · 2026-10-27 · Reviewed by Cheng Varyroitanak (10-27-2026) -- [Pls update this to Version 2.0 IF you update this file]
+Version 2.0 · 2026-11-02 · Reviewed by Cheng Varyroitanak 
 
 ---
 
@@ -78,12 +78,15 @@ Version 1.0 · 2026-10-27 · Reviewed by Cheng Varyroitanak (10-27-2026) -- [Pls
 
 ## Priorities
 
-| Scenario | Business importance | Technical risk | Protects | First? |
-|----------|:---:|:---:|----------|:---:|
-| QAS-01 Availability | H | M | Students (Friday peak) | |
-| QAS-02 Check-in performance | H | H | Organisers (door, no Wi-Fi) | |
-| QAS-03 Usability | | | | |
-| QAS-04 Security | | | | |
-| QAS-05 Modifiability | | | | |
-| QAS-06 Portability | | | | |
->>>>>>> ff7c612895ea31d6fc204e85c20f483564ef87b1
+| # | Scenario | Business importance | Technical risk | Protects | First? |
+|---|----------|:-------------------:|:--------------:|----------|:------:|
+| QAS-01 | Availability | **H** | M | Students (Friday peak) | |
+| QAS-02 | Check-in performance | **H** | **H** | Organisers (door, no Wi-Fi) | |
+| QAS-03 | Usability | **H** | L | First-time students (adoption) | |
+| QAS-04 | Security | **H** | M | Students' personal data, ITC's trust | |
+| QAS-05 | Modifiability | L | L | Developers/maintainers (future paid events) | |
+| QAS-06 | Portability | M | **H** | Students and organisers on mixed devices | with QAS-02 |
+
+**Legend:** H = high, M = medium, L = low. Bold marks the values that drive the ordering.
+
+**Build first:** QAS-02 (the only H/H) together with QAS-06, since both depend on the same offline-first PWA and sync design.

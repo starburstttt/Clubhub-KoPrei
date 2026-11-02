@@ -3,7 +3,7 @@
 
 **Team:** KoPrei  
 **Version:** 2.0  
-**Date:** 2026-10-30  
+**Date:** 2026-11-02
 
 ---
 
@@ -49,7 +49,7 @@ itc-club-hub/
 
 | Task / File | Description | Author / Contributor |
 | :--- | :--- | :--- |
-| [`app-classification.md`](lab02/app-classification.md) | Analyzes application timing vs. availability demands across 5 real-world benchmark systems. | Pho Phatsophal, Tang Hengly, Suonghan Sethaleaph, Yen Chhavorn, CHENG Varyroitanak |
+| [`app-classification.md`](lab02/app-classification.md) | Analyzes application timing vs. availability demands across 5 real-world benchmark systems. | Pho Phatsophal, Tang Hengly, Suonghan Sethaleaph, CHENG Varyroitanak |
 | [`app-quadrant.mmd`](lab02/app-quadrant.mmd) | Visualizes Club Hub's positioning on a 2D demand quadrant diagram relative to benchmarks like ABA Mobile and Telegram. | Team KoPrei |
 | [`adr-001-application-type.md`](lab02/adr-001-application-type.md) | Evaluates Native, PWA, Responsive Web, and Cross-Platform options using a weighted decision matrix and deal-breaker criteria. | Team KoPrei |
 | [`quality-scenarios.md`](lab02/quality-scenarios.md) | Formulates 6 Quality Attribute Scenarios (Availability, Performance, Usability, Security, Modifiability, Portability) and a priority matrix. | CHENG Varyroitanak, Suonghan Sethaleaph, Hengly |
@@ -80,6 +80,12 @@ itc-club-hub/
      ```bash
      ./build/clubhub list-events data/events.csv
      ```
+
+---
+
+## Contribution Notes
+
+* **YEN Chhavorn** was unavailable during this lab period and has no commits in Lab 02.
 
 ---
 

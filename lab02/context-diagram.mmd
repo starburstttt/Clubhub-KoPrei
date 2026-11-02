@@ -1,11 +1,22 @@
+%%{init: {"flowchart": {"curve": "basis", "nodeSpacing": 60, "rankSpacing": 90}}}%%
+%% Context diagram: who uses Club Hub and which external systems it talks to.
+%% Current build: organisers and administrators use the C++ CLI; the PWA/web app is the target design.
 flowchart LR
-  S([Student])
-  CL([Club leader])
-  O([Organiser])
-  A([Administrator])
-  CH[ITC Club Hub]
-  MAIL[[E-mail service]]
-  DIR[[ITC student directory]]
+  subgraph USERS[Users]
+    direction TB
+    S([Student])
+    CL([Club leader])
+    O([Organiser])
+    A([Administrator])
+  end
+
+  CH[["ITC Club Hub"]]
+
+  subgraph EXT[External systems]
+    direction TB
+    MAIL[E-mail service]
+    DIR[ITC student directory]
+  end
 
   S -- "browse events, register, cancel" --> CH
   CH -- "event list, registration status" --> S
@@ -20,3 +31,13 @@ flowchart LR
   MAIL -- "e-mail" --> S
   CH -- "student ID lookup" --> DIR
   DIR -- "name and e-mail" --> CH
+
+  classDef actor fill:#e3f2fd,stroke:#1565c0,stroke-width:2px,color:#000
+  classDef system fill:#1565c0,stroke:#0d47a1,stroke-width:3px,color:#fff,font-weight:bold
+  classDef ext fill:#fff3cd,stroke:#b8860b,stroke-width:2px,color:#000
+  class S,CL,O,A actor
+  class CH system
+  class MAIL,DIR ext
+
+  style USERS fill:#f5faff,stroke:#90caf9,stroke-dasharray:4 4,color:#000
+  style EXT fill:#fffdf3,stroke:#e0c36a,stroke-dasharray:4 4,color:#000
