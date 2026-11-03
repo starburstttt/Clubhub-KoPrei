@@ -56,7 +56,25 @@ itc-club-hub/
 | [`context-diagram.mmd`](lab02/context-diagram.mmd) | Maps external actors (Students, Organisers, Club Leaders, Admins) and external system integrations (E-mail, ITC Directory). | Team KoPrei |
 | [`architecture.mmd`](lab02/architecture.mmd) | Models the 3-Tier system structure (Presentation Tier, Logic Tier, Data Tier). | Team KoPrei |
 | [`offline-checkin.md`](lab02/challenge/offline-checkin.md) | *(Challenge)* Details client-side ServiceWorker & IndexedDB local queuing for zero-network check-ins. | Team KoPrei |
+---
 
+## Diagrams
+
+### System Context Diagram (Task 4)
+
+Club Hub as a single black box, with the four user roles and the two external systems around it.
+
+![Club Hub context diagram](context-diagram.png)
+
+Source: [`context-diagram.mmd`](lab02/context-diagram.mmd)
+
+### Three-Tier Architecture (Task 4)
+
+Presentation, Logic and Data tiers. Green nodes are implemented in C++ this semester, and grey dashed nodes are modelled only.
+
+![Club Hub three-tier architecture](architecture.png)
+
+Source: [`architecture.mmd`](lab02/architecture.mmd)
 ---
 
 ## Build & Execution Instructions
