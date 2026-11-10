@@ -37,3 +37,14 @@ include(GoogleTest)
 add_executable(console_output_tests tests/ConsoleOutputTest.cpp)
 target_link_libraries(console_output_tests PRIVATE clubhub_core GTest::gtest_main)
 gtest_discover_tests(console_output_tests)
+
+
+
+# add Student.cpp to the library, not the executable
+target_sources(clubhub_core PRIVATE src/Student.cpp)
+target_include_directories(clubhub_core PUBLIC include)
+
+# new test executable
+add_executable(student_privacy_tests tests/StudentPrivacyTest.cpp)
+target_link_libraries(student_privacy_tests PRIVATE clubhub_core GTest::gtest_main)
+gtest_discover_tests(student_privacy_tests)
