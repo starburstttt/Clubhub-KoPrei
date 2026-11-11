@@ -1,4 +1,6 @@
 # Consent Flow · ITC Club Hub
+Version 0.1 · 2026-11-11 · Author: Suonghan Sethaleaph
+
 clubhub register ──┐
                    ├─> Enter ID, name, email + notice link
 Web form ──────────┘            │
