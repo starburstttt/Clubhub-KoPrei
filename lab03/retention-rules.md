@@ -1,5 +1,4 @@
 # Retention rules · ITC Club Hub
-Version 0.1 · 2026-11-11 · Author: Suonghan Sethaleaph
 
 | Field | Trigger | Action | Who / what runs it | How to verify |
 |-------|---------|--------|--------------------|---------------|
