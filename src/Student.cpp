@@ -1,4 +1,6 @@
-// SPDX-License-Identifier: TODO (Task 3)
+// SPDX-License-Identifier: MIT
+// Copyright (c) 2026 ITC Club Hub contributors
+
 #include "clubhub/Student.h"
 
 #include <cctype>
