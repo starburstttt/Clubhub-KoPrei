@@ -17,14 +17,14 @@ We wrote this before the web and mobile screens exist, so it is a plan and not a
 | 1.4.11 | Non-text Contrast | P | AA | registration form | Input borders, buttons and the focus outline are at least 3:1 against the background. | WebAIM contrast checker |
 | 2.1.1 | Keyboard | O | A | event list, registration form | Everything works with Tab, Enter and Space. | Unplug the mouse and register for an event |
 | 2.4.7 | Focus Visible | O | AA | event list, registration form | A 2px outline on every control that can take focus. | Tab through every control and look for the outline |
-| 2.4.11 🆕 | Focus Not Obscured (Minimum) | O | AA | event list | The sticky header uses `scroll-padding`, so the focused event is never hidden behind it. | Tab down a long list with the header showing |
-| 2.5.7 🆕 | Dragging Movements | O | AA | event list | No action needs dragging or swiping. Everything has a button. | List every gesture and check it has a click alternative |
-| 2.5.8 🆕 | Target Size (Minimum) | O | AA | registration form | Buttons and checkboxes are at least 24×24 px. We aim for 44 px because students use phones. | Measure in the browser dev tools |
+| 2.4.11  | Focus Not Obscured (Minimum) | O | AA | event list | The sticky header uses `scroll-padding`, so the focused event is never hidden behind it. | Tab down a long list with the header showing |
+| 2.5.7  | Dragging Movements | O | AA | event list | No action needs dragging or swiping. Everything has a button. | List every gesture and check it has a click alternative |
+| 2.5.8  | Target Size (Minimum) | O | AA | registration form | Buttons and checkboxes are at least 24×24 px. We aim for 44 px because students use phones. | Measure in the browser dev tools |
 | 3.1.1 | Language of Page | U | A | event list, registration form | `lang="en"` on the page, and `lang="km"` on Khmer text. | Run axe |
-| 3.2.6 🆕 | Consistent Help | U | A | event list, registration form | The "Help / contact the organiser" link is in the same place on every screen. | Put screenshots of the screens side by side |
+| 3.2.6 | Consistent Help | U | A | event list, registration form | The "Help / contact the organiser" link is in the same place on every screen. | Put screenshots of the screens side by side |
 | 3.3.1 | Error Identification | U | A | registration form | An error names the field and says what is wrong, for example "Email needs an @". | Submit an empty form and read the messages |
-| 3.3.7 🆕 | Redundant Entry | U | A | registration form | Name and student ID are prefilled from the profile. We never ask twice. | Register for two events in a row |
-| 3.3.8 🆕 | Accessible Authentication (Minimum) | U | AA | login | Pasting and password managers are allowed. No CAPTCHA puzzles or memory tests. | Paste into the password field and try a password manager |
+| 3.3.7  | Redundant Entry | U | A | registration form | Name and student ID are prefilled from the profile. We never ask twice. | Register for two events in a row |
+| 3.3.8  | Accessible Authentication (Minimum) | U | AA | login | Pasting and password managers are allowed. No CAPTCHA puzzles or memory tests. | Paste into the password field and try a password manager |
 | 4.1.2 | Name, Role, Value | R | A | event list, registration form | Use native HTML elements first. Add ARIA only where HTML can't do the job. | Run axe, then try it with a screen reader |
 | 4.1.3 | Status Messages | R | AA | registration form | "You are registered" uses `role="status"`. | Check that a screen reader reads it out without moving focus |
 
