@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: MIT
+// Copyright (c) 2026 ITC Club Hub contributors
+
 // tests/StudentPrivacyTest.cpp
 #include "clubhub/Student.h"
 

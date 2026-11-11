@@ -1,4 +1,6 @@
-// SPDX-License-Identifier: <your licence>
+// SPDX-License-Identifier: MIT
+// Copyright (c) 2026 ITC Club Hub contributors
+
 #include "clubhub/ConsoleOutput.h"
 
 #include <cstdlib>

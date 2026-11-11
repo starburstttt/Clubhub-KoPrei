@@ -1,4 +1,6 @@
 // SPDX-License-Identifier: MIT
+// Copyright (c) 2026 ITC Club Hub contributors
+
 #pragma once
 
 #include <string>
