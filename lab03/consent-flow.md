@@ -1,3 +1,4 @@
+# Consent Flow · ITC Club Hub
 clubhub register ──┐
                    ├─> Enter ID, name, email + notice link
 Web form ──────────┘            │
