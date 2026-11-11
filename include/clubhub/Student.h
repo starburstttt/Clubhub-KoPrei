@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-// Copyright (c) 2026 ITC Club Hub contributors
+// Copyright (c) 2026 KoPrei, ITC Club Hub contributors
 
 // include/clubhub/Student.h
 #pragma once
