@@ -33,3 +33,9 @@ flowchart LR
 
 ## Client feedback
 - TODO: fill in after the 5-minute walkthrough of the Drop decisions (dateOfBirth, photo) with the TA.
+- Product Owner: ITC Club Hub Product Owner.
+- Client: Teaching Assistant (acting client).
+- Review: Walk through all Drop decisions, explaining why each field has no necessary purpose in the current system.
+- Client objections: Record any objections raised by the teaching assistant here.
+- Client response: Pending discussion with the teaching assistant.
+- Final decision: Update the inventory if the teaching assistant identifies a genuine requirement. Do not collect additional personal data without an approved purpose and retention rule.
