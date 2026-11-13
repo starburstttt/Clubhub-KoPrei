@@ -16,4 +16,5 @@
 
 ## Overlaps and loops
 1. Week 10: the Sprint 1 review shows the client wants "seats left" in the event list -> new story US-21 -> specification again in week 11.
-2. TODO
+2. Weeks 9-12: design and validation interleave daily: each pull request contains code and its tests, reviewed before merge.
+3. Weeks 12-13: a bug found in the demo (e.g. a 24 h cancellation edge case) goes back to evolution as a change request, then to implementation and validation again with a new regression test.
