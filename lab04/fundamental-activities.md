@@ -12,7 +12,9 @@
 - Specification: elicitation, analysis, specification, validation of requirements · 12207: Stakeholder needs and requirements definition, System/software requirements definition
 - Design and implementation: architectural design, detailed design (data model, screens, business rules), coding, unit testing, code review · 12207: Architecture definition, Design definition, Implementation
 - Validation: TODO
-- Evolution: TODO
+- Evolution: change-request triage, impact analysis, modification with regression testing, release and tagging · 12207: Maintenance, Transition
+
+
 
 ## Overlaps and loops
 1. Week 10: the Sprint 1 review shows the client wants "seats left" in the event list -> new story US-21 -> specification again in week 11.
