@@ -23,22 +23,30 @@ endif()
 add_executable(clubhub src/cli/main.cpp)
 target_link_libraries(clubhub PRIVATE clubhub_core)
 
-# Tests (Lab 3)
+# Reused libraries (Lab 4): both declared BEFORE MakeAvailable
 include(FetchContent)
+
+# Reuse 1: GoogleTest (BSD-3-Clause), unit-test framework.
 FetchContent_Declare(googletest
-    URL https://github.com/google/googletest/archive/refs/tags/v1.14.0.zip
+    URL https://github.com/google/googletest/archive/refs/tags/v1.17.0.zip
     DOWNLOAD_EXTRACT_TIMESTAMP TRUE)
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
-FetchContent_MakeAvailable(googletest)
 
+# Reuse 2: rapidcsv (BSD-3-Clause), header-only CSV reader.
+FetchContent_Declare(rapidcsv
+    GIT_REPOSITORY https://github.com/d99kris/rapidcsv.git
+    GIT_TAG        v8.90
+    GIT_SHALLOW    TRUE)
+
+FetchContent_MakeAvailable(googletest rapidcsv)
+
+# Tests (Lab 3)
 enable_testing()
 include(GoogleTest)
 
 add_executable(console_output_tests tests/ConsoleOutputTest.cpp)
 target_link_libraries(console_output_tests PRIVATE clubhub_core GTest::gtest_main)
 gtest_discover_tests(console_output_tests)
-
-
 
 # add Student.cpp to the library, not the executable
 target_sources(clubhub_core PRIVATE src/Student.cpp)
@@ -48,3 +56,9 @@ target_include_directories(clubhub_core PUBLIC include)
 add_executable(student_privacy_tests tests/StudentPrivacyTest.cpp)
 target_link_libraries(student_privacy_tests PRIVATE clubhub_core GTest::gtest_main)
 gtest_discover_tests(student_privacy_tests)
+
+# Smoke test (Lab 4): proves the reused CSV library is fetched, built and linked
+add_executable(csv_smoke_test tests/csv_smoke_test.cpp)
+target_link_libraries(csv_smoke_test PRIVATE rapidcsv GTest::gtest_main)
+gtest_discover_tests(csv_smoke_test
+    WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
