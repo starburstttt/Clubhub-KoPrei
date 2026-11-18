@@ -1,4 +1,4 @@
-# Process comparison · Team <Clubhub-koprei> · v1.0
+# Process comparison · Team KoPreii · v1.0
 
 Scale: 1 = fits Club Hub badly on this criterion, 5 = fits very well.
 
