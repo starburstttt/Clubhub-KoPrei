@@ -4,11 +4,11 @@
 |---|---|---|---|---|---|
 | Agile | 3 | 4 | 5 | 3 | 4 |
 | Waterfall | 5 | 4 | 5 | 5 | 1 |
-| Spiral | 5 | 2 | 3 | 2 | 4 |
+| Spiral | 5 | 2 | 3 | 2 | 3 |
 | V-model | 4 | 3 | 4 | 4 | 4 |
 | Incremental | 4 | 5 | 4 | 4 | 2 |
-| Iterative | 4 | 4 | 3 | 2 | 3 |
-| Prototyping | 2 | 5 | 3 | 4 | 3 |
+| Iterative | 5 | 4 | 3 | 2 | 3 |
+| Prototyping | 3 | 5 | 3 | 4 | 3 |
 | Plan-driven | 4 | 3 | 3 | 5 | 3 |
 
 ## Scoring Guide
