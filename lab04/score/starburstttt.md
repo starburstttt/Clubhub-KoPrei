@@ -2,14 +2,13 @@
 
 | Model | Requirements stability | Client availability | Team experience | Deadline | Risk |
 |---|---|---|---|---|---|
-| Agile | 3 | 4 | 3 | 4 | 3 |
-| Waterfall | 5 | 4 | 5 | 5 | 4 |
-| Spiral | 3 | 3 | 3 | 3 | 5 |
-| V-model | 5 | 3 | 4 | 4 | 4 |
-| Incremental | 4 | 5 | 5 | 5 | 5 |
-| Iterative | 3 | 4 | 4 | 4 | 3 |
-| Prototyping | 2 | 5 | 3 | 4 | 3 |
-| Plan-driven | 5 | 3 | 4 | 4 | 4 |
+| Agile | 5 | 4 | 3 | 4 | 4 |
+| Waterfall | 2 | 3 | 4 | 2 | 2 |
+| Spiral | 4 | 3 | 2 | 2 | 5 |
+| V-model | 2 | 3 | 3 | 2 | 3 |
+| Incremental | 3 | 4 | 3 | 4 | 3 |
+| Iterative | 4 | 3 | 3 | 3 | 4 |
+| Prototyping | 5 | 2 | 3 | 4 | 3 |
 
 ## Scoring Guide
 
