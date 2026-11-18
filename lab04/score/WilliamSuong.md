@@ -9,7 +9,7 @@
 | Incremental | 4 | 4 | 5 | 4 | 2 |
 | Iterative | 4 | 4 | 5 | 4 | 2 |
 | Prototyping | 5 | 5 | 3 | 4 | 2 |
-| Plan-driven | 2 | 2 | 4 | 3 | 4 |
+| Plan-driven | 2 | 2 | 4 | 3 | 5 |
 
 ## Scoring Guide
 
