@@ -3,6 +3,8 @@
 **REQ-12:** A student can cancel a registration until 24 hours before the start of the event.
 Business rule: cancellation allowed if (start − now) ≥ 24 h; exactly 24 h is allowed (to confirm with client).
 
+## 1. Trace table
+
 | Level | Left side (defines) | Right side (tests) |
 |---|---|---|
 | Requirement | REQ-12 (above) | AT-12: two Gherkin scenarios (section 2), run at sprint review |
@@ -12,3 +14,26 @@ Business rule: cancellation allowed if (start − now) ≥ 24 h; exactly 24 h is
 
 Boundary values: exactly 24 h (allowed) and one second less (rejected).
 Open question for client: is "exactly 24 h" allowed? (Code currently says yes.)
+
+## 2. Acceptance test AT-12 (Gherkin)
+
+```gherkin
+Feature: Cancel a registration (REQ-12, acceptance test AT-12)
+
+  Background:
+    Given the event "Robotics Workshop" starts on 2026-11-07 at 14:00
+    And student "S001" is registered for "Robotics Workshop"
+
+  Scenario: Cancellation exactly 24 hours before the start is allowed
+    Given the current time is 2026-11-06 14:00
+    When student "S001" cancels the registration
+    Then the registration status is "Cancelled"
+    And one seat becomes free
+
+  Scenario: Cancellation less than 24 hours before the start is rejected
+    Given the current time is 2026-11-06 14:00:01
+    When student "S001" cancels the registration
+    Then the registration status is "Registered"
+    And the message "Cancellation closed" is shown
+    And no seat becomes free
+```
