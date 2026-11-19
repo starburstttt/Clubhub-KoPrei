@@ -29,17 +29,18 @@
 ## Task 3: approvals of PDR-001 (every member reviews and approves)
 | Member               | Approved? (Yes/No) | Date   |
 |----------------------|--------------------|--------|
-| CHENG Varyroitanak   | ______             | ______ |
-| PHO Phatsophal       | ______             | ______ |
-| SOUNGHAN Sethaleaph  | ______             | ______ |
-| YEN Chhavorn         | ______             | ______ |
-| TANG Hengly          | ______             | ______ |
+| CHENG Varyroitanak   | Yes             | 19/11/2026|
+| PHO Phatsophal       | Yes             | 19/11/2026|
+| SOUNGHAN Sethaleaph  | Yes             | 19/11/2026 |
+| YEN Chhavorn         | Yes          | 19/11/2026 |
+| TANG Hengly          | Yes          | 19/11/2026 |
 
 ## Change log
 | Date       | Change                                               | By     |
 |------------|------------------------------------------------------|--------|
 | 2026-11-17 | Lab-04 task 5: reuse inventory, FetchContent GoogleTest and rapidcsv, smoke test | CHENG Varyroitanak |
-| 2026-__-__ | Lab-04 task 1: ______                                | ______ |
-| 2026-__-__ | Lab-04 task 2: ______                                | ______ |
-| 2026-__-__ | Lab-04 task 3: ______                                | ______ |
-| 2026-__-__ | Lab-04 task 4: ______                                | ______ |
+| 2026-11-13 | Lab-04 task 1: fundamental activities for Club Hub                               | Team KoPrei |
+| 2026-11-18 | Lab-04 task 2: scored process comparison                             | Yen Chhavorn, Team KoPrei |
+| 2026-11-18 | Lab-04 task 3: Completed process-comparison.md and process.mmd                              | Pho Phatsophal|
+| 2026-11-18 | Lab-04 task 4: Added and Completed iteration-plan.md                               | Tang Hengly |
+| 2026-11-18 | Lab-04 Challenge: Did the entire challenge | Sounghan Sethaleaph |
