@@ -1,4 +1,4 @@
-# Lab-04 · Software Development Processes · Team KoPrei - V1.0
+# Lab-04 · Software Development Processes · Team KoPrei - V2.0
 
 ## Files of this lab
 | File                          | Task | Description                          |
