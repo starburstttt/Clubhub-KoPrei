@@ -1,0 +1,25 @@
+flowchart TD
+    A["Requirements · Weeks 5–6<br/>Product Owner + Whole Team"]
+    B["Modelling · Week 7<br/>Whole Team"]
+    C["Checkpoint 1 · Week 8<br/>Product Owner + Client"]
+    D["Product Backlog<br/>Product Owner"]
+    E["Sprint Planning<br/>Whole Team"]
+    F["Development and Testing<br/>Developers"]
+    G["Sprint Review<br/>Client + Product Owner"]
+    H["Retrospective<br/>Scrum Master + Whole Team"]
+    I{"Another sprint?<br/>Whole Team"}
+    J["Hardening · Week 13<br/>Developers + Testers"]
+    K["Submission · Week 14<br/>Whole Team + Product Owner"]
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    F --> G
+    G --> H
+    H --> I
+    I -->|Yes| E
+    I -->|No| J
+    J --> K
+    G -.->|Feedback and new priorities| D
